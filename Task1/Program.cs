@@ -1,21 +1,28 @@
-﻿Console.WriteLine("Введите координаты точки А  ->");
+﻿// Task № 21 
+
+
+Console.WriteLine("Введите координаты точки А  ->");
 Console.Write("X1: ");
-double xa = Convert.ToDouble(Console.ReadLine());
+int xa = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y1: ");
-double ya = Convert.ToDouble(Console.ReadLine());
+int ya = Convert.ToInt32(Console.ReadLine());
 Console.Write("Z1: ");
-double za = Convert.ToDouble(Console.ReadLine());
+int za = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите координаты точки B  ->");
 Console.Write("X2: ");
-double xb = Convert.ToDouble(Console.ReadLine());
+int xb = Convert.ToInt32(Console.ReadLine());
 Console.Write("Y2: ");
-double yb = Convert.ToDouble(Console.ReadLine());
+int yb = Convert.ToInt32(Console.ReadLine());
 Console.Write("Z2: ");
-double zb = Convert.ToDouble(Console.ReadLine());
+int zb = Convert.ToInt32(Console.ReadLine());
 
-double range = Math.Sqrt((xb - xa)*(xb - xa) + (yb - ya)*(yb - ya) + (zb - za)*(zb - za));
-double res = Math.Round(range , 2);
+double Distance (int xa, int ya, int za, int xb, int yb, int zb)
+{
+    return Math.Sqrt((xb - xa)*(xb - xa) + (yb - ya)*(yb - ya) + (zb - za)*(zb - za));
+}
+
+double res = Math.Round(Distance (xa, ya, za, xb, yb, zb), 2);
 Console.WriteLine(res);
 
 
